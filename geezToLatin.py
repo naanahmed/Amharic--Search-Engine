@@ -34,4 +34,6 @@ def convert(s):
                'ፐ': 'Pä', 'ፑ': 'Pu', 'ፒ': 'Pi', 'ፓ': 'Pa', 'ፔ': 'Pe', 'ፕ': 'P', 'ፖ': 'Po',
                'ቨ': 'Vä', 'ቩ': 'Vu', 'ቪ': 'Vi', 'ቫ': 'Va', 'ቬ': 'Ve', 'ቭ': 'V', 'ቮ': 'Vo'
                }
-    return ''.join(mapping.get(x, x) for x in s)
+
+    converted_to_latin = ''.join(mapping.get(x, x) for x in s)
+    return converted_to_latin
