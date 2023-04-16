@@ -32,7 +32,15 @@ def convertBack(s):
                'Vä': 'ቨ', 'Vu': 'ቩ', 'Vi': 'ቪ', 'Va': 'ቫ', 'Ve': 'ቬ', 'V': 'ቭ', 'Vo': 'ቮ'
                }
 
-    print(''.join(mapping.get(x, x) for x in s))
+    converted_to_geez = ''
+    i = 0
+    while i < len(s):
+        pair = s[i:i + 2]
+        if pair in mapping:
+            converted_to_geez += mapping[pair]
+            i += 2
+        else:
+            converted_to_geez += mapping.get(s[i], s[i])
+            i += 1
 
-
-convertBack('Vä')
+    print(converted_to_geez)
