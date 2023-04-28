@@ -43,4 +43,4 @@ def convertBack(s):
             converted_to_geez += mapping.get(s[i], s[i])
             i += 1
 
-    print(converted_to_geez)
+    return converted_to_geez
